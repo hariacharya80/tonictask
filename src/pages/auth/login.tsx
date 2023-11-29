@@ -1,5 +1,11 @@
+import AuthLayout from "@/layouts/AuthLayout";
+
 function login() {
-  return <div>login</div>;
+  return (
+    <AuthLayout>
+      <div>login</div>
+    </AuthLayout>
+  );
 }
 
 export default login;
