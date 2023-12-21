@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import HeaderLogo from "@/assets/images/logo-main.png";
+import { ModeToggle } from "./toggle-mode";
+import { Button } from "./ui/button";
 
 function Header() {
   const router = useRouter();
@@ -19,12 +21,11 @@ function Header() {
         alt="Tonic Task"
       />
       <div className="flex justify-center items-center gap-3">
-        <button className="bg-black px-10 py-2 text-white rounded shadow-xl hover:shadow-2xl hover:bg-slate-700 transition-colors">
-          Sign up
-        </button>
-        <button className="bg-slate-100 py-2 px-10 text-black rounded transition-colors hover:bg-slate-200">
-          Log in
-        </button>
+        <Button>Sign up</Button>
+        <Button variant="secondary">Login</Button>
+      </div>
+      <div>
+        <ModeToggle />
       </div>
     </header>
   );

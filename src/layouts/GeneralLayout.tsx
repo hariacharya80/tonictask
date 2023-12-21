@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
 
 interface GeneralLayoutProps {
@@ -6,10 +7,10 @@ interface GeneralLayoutProps {
 }
 function GeneralLayout({ children }: GeneralLayoutProps) {
   return (
-    <div>
+    <ThemeProvider attribute="class" defaultTheme="system">
       <Header />
       {children}
-    </div>
+    </ThemeProvider>
   );
 }
 
