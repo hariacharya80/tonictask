@@ -4,12 +4,15 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import HeaderLogo from "@/assets/images/logo-main.png";
 import { ModeToggle } from "./toggle-mode";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
+import { useSelector } from "react-redux";
 
 function Header() {
   const router = useRouter();
+  const user = useSelector((state: any) => state.user);
+
   return (
-    <header className="flex justify-between items-center py-3 border-b-[1px]">
+    <header className="flex justify-between items-center p-3 border-b-[1px] overflow-auto">
       <Image
         onClick={() => {
           //   naviga
